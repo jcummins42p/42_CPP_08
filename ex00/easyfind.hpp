@@ -6,7 +6,7 @@
 /*   By: jcummins <jcummins@student.42prague.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/04 17:44:19 by jcummins          #+#    #+#             */
-/*   Updated: 2025/01/14 17:07:01 by jcummins         ###   ########.fr       */
+/*   Updated: 2025/01/15 14:34:14 by jcummins         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,6 @@ typename container_T::iterator easyfind(container_T &input, int search) {
 			return it;
 		it++;
 	}
-	std::cout << "Unable to find " << search << " in container provided" << std::endl;
 	throw std::invalid_argument("Argument not found in container");
 }
 
