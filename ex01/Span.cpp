@@ -6,7 +6,7 @@
 /*   By: jcummins <jcummins@student.42prague.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/04 17:43:14 by jcummins          #+#    #+#             */
-/*   Updated: 2025/01/17 19:32:12 by jcummins         ###   ########.fr       */
+/*   Updated: 2025/01/18 17:29:46 by jcummins         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,11 +63,16 @@ void	Span::addNumber( int num ) {
 }
 
 void	Span::addRange( std::vector<int>::iterator begin, std::vector<int>::iterator end ) {
-	if (begin >= end)
-		throw std::runtime_error("Invalid range");
-	while (begin != end) {
-		numbers.push_back(*begin++);
+	if (begin > end) {
+		while (begin > end)
+			numbers.push_back(*--begin);
 	}
+	else if (begin < end) {
+		while (begin != end)
+			numbers.push_back(*begin++);
+	}
+	else
+		throw std::runtime_error ("Invalid range");
 }
 
 void	Span::addRangeByNumber( long int begin, long int step, unsigned int n ) {
