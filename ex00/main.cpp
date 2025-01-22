@@ -6,7 +6,7 @@
 /*   By: jcummins <jcummins@student.42prague.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/04 17:43:14 by jcummins          #+#    #+#             */
-/*   Updated: 2025/01/17 19:27:38 by jcummins         ###   ########.fr       */
+/*   Updated: 2025/01/22 13:04:50 by jcummins         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,11 +37,11 @@ void test_generic(T &container, int size) {
 	try {
 		fill_container(container, size);
 		print_container(container);
-		typename T::iterator it = easyfind(container, 10);
+		typename T::iterator it = easyfind(container, 13);
 		std::cout << "Found " << *it << std::endl;
 	}
 	catch ( std::invalid_argument &e ) {
-		std::cout << e.what();
+		std::cout << e.what() << std::endl;
 	}
 }
 
