@@ -6,7 +6,7 @@
 /*   By: jcummins <jcummins@student.42prague.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/04 17:43:14 by jcummins          #+#    #+#             */
-/*   Updated: 2025/01/22 14:01:23 by jcummins         ###   ########.fr       */
+/*   Updated: 2025/01/22 16:04:51 by jcummins         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -110,5 +110,5 @@ unsigned int Span::longestSpan() const {
 		throw (std::runtime_error("Insufficient numbers to calculate span"));
 	std::vector<int>::const_iterator min = std::min(numbers.begin(), numbers.end());
 	std::vector<int>::const_iterator max = std::max_element(numbers.begin(), numbers.end());
-	return (max - min);
+	return (*max - *min);
 }
